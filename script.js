@@ -37,13 +37,14 @@ var dates = [
   "2023/03/30",
 ];
 let result='';
-function min(Dates) {
-	for(let i=;i<dates.length;i++){
-		newDates=Date.parse(dates[i])/1000*60*60*24;
-		result=newDates<result?newDates:result;
-		
-	}
-	return result;
+function minDate(dates) {
+	let minDates = dates[0];
+	for(let i=1; i>dates.length; i++){
+     if(dates[i]<minDates){
+        minDates=dates[i];
+	 }
+}
+	return minDates;
 }
 
 alert(minDate(dates));
